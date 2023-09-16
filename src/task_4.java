@@ -63,22 +63,7 @@ public class task_4 {
             }
         }
 
-        int lengthOfNewArray = 0;
-        for(String word : arr) {
-            int count = 0;
-            char[] letters = word.toCharArray();
-            for(int f = 0; f < letters.length; f++) {
-                if(letters[f] == 'a' || letters[f] == 'A') {
-                    count++;
-                }
-            }
-            if(count == biggestLettersCount) {
-                lengthOfNewArray++;
-            }
-        }
-
-
-        String[] newArray = new String[lengthOfNewArray];
+        String[] newArray = new String[arr.length];
         int newArrayIndex = 0;
         for(String word : arr) {
             int count = 0;
@@ -90,6 +75,9 @@ public class task_4 {
             }
             if(count == biggestLettersCount) {
                 newArray[newArrayIndex] = word;
+                newArrayIndex++;
+            }else {
+                newArray[newArrayIndex] = Integer.toString(letters.length);
                 newArrayIndex++;
             }
         }
