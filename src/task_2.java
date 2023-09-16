@@ -74,11 +74,13 @@ public class task_2 { // №10
     public static int[] fillArray(int[] array_A, int[] array_B) {
         int[] newArray = new int[array_A.length + array_B.length];
         int newArrayLength = 0;
+
         for(int i = 0; i < array_A.length; i++) {
             boolean isUniq = true;
             for(int f = 0; f < array_B.length; f++) {
                 if(array_A[i] == array_B[f]) {
                     isUniq = false;
+                    break;
                 }
             }
 
@@ -93,6 +95,7 @@ public class task_2 { // №10
             for(int f = 0; f < array_A.length; f++) {
                 if(array_B[i] == array_A[f]) {
                     isUniq = false;
+                    break;
                 }
             }
 
@@ -112,6 +115,7 @@ public class task_2 { // №10
             for(int f = 0; f < array_B.length; f++) {
                 if(array_A[i] == array_B[f]) {
                     isUniq = false;
+                    break;
                 }
             }
 

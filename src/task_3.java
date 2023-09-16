@@ -58,9 +58,8 @@ public class task_3 {
             for(int f = 0; f < matrix.length; f++) {
                 if(matrix[i][f] < 0) {
                     isNegativeValue = true;
-                }
-
-                if(isNegativeValue) {
+                    sum += Math.abs(matrix[i][f]);
+                }else if(isNegativeValue) {
                     sum += matrix[i][f];
                 }
             }
@@ -68,3 +67,18 @@ public class task_3 {
         }
     }
 }
+
+
+
+// public static void fillMatrix(int[][] matrix) {
+//         Scanner scanner = new Scanner(System.in);
+//         Random random = new Random();
+        
+//         System.out.println("Заповніть матрицю: ")
+//         for(int i = 0; i < matrix.length; i++) {
+//             for(int f = 0;f < matrix.length; f++) {
+//                 System.out.print("matrix["+i+"]["+f+"]: ")
+//                 matrix[i][f] = scanner.nextInt();
+//             }
+//         }
+//     }
